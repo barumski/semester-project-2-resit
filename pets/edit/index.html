@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+    content="Update your pet's information to keep their profile accurate and ready for potential adopters.">
+
+    <!-- Title -->
+    <title>PetPals | Edit Pet</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/icons/favicon/site.webmanifest">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/output.css">
+
+    <!-- Scripts -->
+</head>
+
+
+<body>
+
+    <header id="header"></header>
+
+        <main>
+
+        <section id="edit-pet">
+
+            <a href="../../index.html">← Back to Home</a>
+
+            <div>
+                
+                <div>
+                    <h1>Edit Pet</h1>
+                    <p>Update your pet's information to keep their profile accurate and ready for adoption</p>
+                </div>
+
+                <form id="edit-pet-form">
+
+                    <div>
+                        <label for="pet-name">Name</label>
+                        <input
+                            id="pet-name"
+                            name="name" 
+                            type="text"
+                            required>
+                    </div>
+
+                    <div>
+                        <label for="pet-age">Age</label>
+                        <input 
+                            id="pet-age"
+                            name="age"
+                            type="number"
+                            min="0"
+                            required>
+                    </div>
+
+                    <div>
+                        <label for="pet-size">Size</label>
+                        <select id="size" name="size" required>
+                            <option value="">Select Size</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="pet-description">Description</label>
+                        <textarea 
+                            id="pet-description"
+                            name="description"
+                            rows="6"
+                            required>
+                        </textarea>
+                    </div>
+
+                    <div>
+                        <label for="pet-image">Image URL</label>
+                        <input
+                            id="pet-image"
+                            name="image"
+                            type="url">
+                    </div>
+
+                    <div id="message-container"></div>
+
+                    <button type="submit">Save Changes</button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+    
+    <footer id="footer"></footer>
+    
+</body>
+
+</html>
