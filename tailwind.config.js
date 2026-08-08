@@ -15,18 +15,34 @@ module.exports = {
         heading: ["Poppins", "sans-serif"],
       },
 
+      boxShadow: {
+        input: "inset 0 2px 4px rgba(0, 0, 0, 0.15)",
+        card: "0 8px 24px rgba(0, 0, 0, 0.08)",
+        cardHover: "0 12px 32px rgba(0, 0, 0, 0.25)",
+      },
+
       colors: {
         primary: "#4F7D5A",
+        primaryHover: "#32553B",
         secondary: "#D8B46A",
         accent: "#A8C3A0",
         background: "#F8F6F2",
+        hero: "#D5CBC5",
         surface: "#FFFFFF",
         text: "#2D2D2D",
         success: "#4CAF50",
         warning: "#D8B46A",
-        error: "#D9534F",
+        danger: "#D9534F",
+        dangerHover: "#AF423E",
         disabled: "#D6D6D6",
-        divider: "#D6D6D6"
+        divider: "#D6D6D6",
+        ageBg: "#E8F3EC",
+        sizeSmall: "#2D5BD1",
+        sizeSmall_bg: "#E6F0FF",
+        sizeMedium: "#8A6D00",
+        sizeMediumBg: "#FFF3D6",
+        sizeLarge: "#95599A",
+        sizeLargeBg: "#E6D6FF"
       },
 
       borderRadius: {

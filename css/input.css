@@ -31,3 +31,23 @@
         font: inherit;
     }
 }
+
+@layer components {
+    .container-custom {
+        @apply max-w-7xl mx-auto px-5 lg:px-8;
+    }
+
+    .hero-gradient {
+        background: linear-gradient(
+            90deg,
+            theme("colors.hero") 0%,
+            theme("colors.hero") 45%,
+            #EEE8E4 50%,
+            #EEE8E4 100%
+        );
+    }
+
+    .input-shadow {
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15)
+    }
+}

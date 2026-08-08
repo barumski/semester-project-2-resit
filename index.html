@@ -8,7 +8,7 @@
     content="PetPals helps loving pets find their forever homes. Browse available pets and adopt your next best friend.">
 
     <!-- Title -->
-    <title>PetPals | Home</title>
+    <title>PetPals - Home</title>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/favicon/apple-touch-icon.png">
@@ -25,39 +25,170 @@
     <link rel="stylesheet" href="css/output.css">
 
     <!-- Scripts -->
+    <script type="module" src="js/main.js"></script>
 </head>
 
 
 <body>
 
-    <header id="header"></header>
+    <header id="header-container" class="sticky top-0 z-50 bg-surface shadow-sm">
+
+        <div class="container-custom flex h-20 items-center justify-between">
+            <a href="index.html" class="shrink-0">
+                <img src="assets/images/logo/header-logo.svg" alt="PetPals" class="w-36">
+            </a>
+
+            <nav id="main-navigation" aria-label="Primary navigation" class="hidden lg:flex lg:items-center lg:gap-10">
+                <a href="index.html"
+                class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">Home</a>
+                <a href="about/index.html"
+                class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">About</a>
+                <a href="contact/index.html"
+                class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">Contact</a>
+            </nav>
+
+            <div id="auth-buttons" class="hidden items-center gap-4 lg:flex">
+                <a href="account/login/index.html"
+                class="flex h-12 w-24 items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
+                text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">Log In</a>
+                <a href="account/register/index.html"
+                class="flex h-12 w-24 items-center justify-center rounded-xl bg-primary text-base font-medium 
+                text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">Register</a>
+            </div>
+
+            <button 
+                id="menu-button"
+                type="button" 
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobile-navigation"
+                class="ml-2 flex h-11 w-11 items-center justify-center lg:hidden">
+
+                <img 
+                    src="assets/icons/ui/menu.svg" 
+                    alt="" 
+                    class="h-6 w-6">
+            </button>
+
+        </div>
+
+        <div
+            id="mobile-menu-overlay"
+            class="fixed inset-0 z-40 hidden bg-black/50 lg:hidden">
+        </div>
+
+        <nav 
+            id="mobile-navigation"
+            aria-label="Mobile navigation"
+            class="fixed left-0 top-0 z-50 hidden h-screen w-3/4 bg-surface shadow-xl lg:hidden">
+
+            <div class="flex h-full flex-col px-6 pt-2 pb-6">
+
+                <img 
+                    src="assets/images/logo/header-logo.svg" 
+                    alt="PetPals"
+                    class="mx-auto mt-2 w-36">
+
+                <p id="mobile-username" class="mt-6 min-h-6 text-center text-lg font-medium text-primary"></p>
+
+                <div class="mt-8 flex flex-col gap-6 border-t border-divider pt-6">
+
+                    <a 
+                        href="index.html"
+                        class="flex items-center gap-3 py-2 text-base font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:decoration-primaryHover">
+                            <img 
+                                src="assets/icons/ui/home.svg" 
+                                alt=""
+                                class="h-4 w-4">
+                        Home
+                    </a>
+
+                    <a 
+                        href="about/index.html"
+                        class="flex items-center gap-3 py-2 text-base font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:decoration-primaryHover">
+                            <img 
+                                src="assets/icons/ui/about.svg" 
+                                alt=""
+                                class="h-4 w-4">
+                        About
+                    </a>
+                    
+                    <a 
+                        href="contact/index.html"
+                        class="flex items-center gap-3 py-2 text-base font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:decoration-primaryHover">
+                            <img 
+                                src="assets/icons/ui/phone.svg" 
+                                alt=""
+                                class="h-4 w-4">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <div class="mt-auto flex flex-col gap-4">
+                    <a 
+                        href="account/login/index.html"
+                        class="flex h-12 w-full items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
+                        text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
+                        Log In
+                    </a>
+
+                    <a 
+                        href="account/register/index.html"
+                        class="flex h-12 w-full items-center justify-center rounded-xl bg-primary text-base font-medium 
+                        text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
+                        Register
+                    </a>
+
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
 
     <main>
 
-        <section id="hero">
+        <section id="hero" class="hero-gradient">
 
-            <div>
+            <div class="grid lg:h-[600px] lg:grid-cols-2">
 
-                <div>
+                <div class="flex flex-col justify-center gap-6 px-10 lg:px-28">
 
-                    <h1></h1>
+                    <h1 class="text-4xl font-bold leading-tight text-primary lg:text-6xl lg:leading-[72px]">Find your new <br>best friend</h1>
 
-                    <p></p>
+                    <p class="max-w-xl text-base leading-relaxed text-text lg:text-xl">
+                        Discover loving dogs, cats and other pets <br>waiting for a forever home. 
+                        Browse available <br>pets and find the perfect companion</p>
 
-                    <div>
+                    <div class="flex items-center gap-3">
 
-                        <img src="" alt="">
+                        <img 
+                            src="assets/icons/ui/paw.svg" 
+                            alt=""
+                            class="h-8 w-8">
 
-                        <p></p>
+                        <p 
+                            id="pet-counter"
+                            class="text-3xl font-semibold text-primary">
+                            250+
+                        </p>
+
                     </div>
 
-                    <p></p>
+                    <p class="text-lg text-text">
+                        Pets waiting for adoption
+                    </p>
 
                 </div>
 
-                <div>
+                <div class="h-full overflow-hidden">
 
-                    <img>
+                    <img 
+                        src="assets/images/hero/hero-pets.jpg" 
+                        alt="A group of pets waiting to find loving homes"
+                        class="h-full w-full object-cover">
 
                 </div>
 
@@ -65,35 +196,124 @@
 
         </section>
 
-        <section id="search">
+        <section id="search" class="relative z-10 -mt-6">
 
-            <div>
+            <div class="container-custom flex justify-center">
 
-                <input>
+                <div class="relative w-full max-w-[342px] lg:max-w-[500px]">
+
+                    <label for="pet-search" class="sr-only">
+                        Search pets by name or breed...
+                    </label>
+
+                    <input 
+                        id="pet-search"
+                        type="search"
+                        placeholder="Search by name or breed..."
+                        class="h-12 w-full rounded-xl border shadow-input border-divider bg-surface pl-4 pr-12 text-base text-text outline-none">
+
+                    <button 
+                        id="search-icon-button"
+                        type="button"
+                        aria-label="Search"
+                        class="absolute right-4 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center">
+                    
+                        <img
+                            id="search-icon" 
+                            src="assets/icons/ui/search.svg" 
+                            alt=""
+                            class="h-5 w-5">
+
+                    </button>
+
+                </div>
 
             </div>
 
         </section>
 
-        <section id="pets">
+        <section id="pets" class="pt-20 pb-20 mt-16">
 
-            <div>
+            <div class="container-custom">
 
-                <div>
+                <div class="mb-12 flex flex-col items-center">
 
-                    <h2></h2>
+                    <div class="flex items-center gap-3">
 
-                    <p></p>
+                    <img 
+                        src="assets/icons/ui/paw.svg" 
+                        alt=""
+                        class="h-8 w-8">
+
+                    <h2 class="text-5xl font-semibold text-primary">
+                        Meet our pets
+                    </h2>
+
+                    </div>
+
+                    <p class="mt-12 max-w-2xl text-center text-xl font-medium leading-relaxed text-primary">
+                        Meet wonderful pets looking for a loving home.
+                        <br>Browse our available pets and find your perfect <br>companion today.
+                    </p>
 
                 </div>
 
-                <div>
+                <div id="pet-grid" class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
 
-                    <input>
+                    <article class="group flex h-[450px] w-full max-w-[320px] flex-col overflow-hidden rounded-2xl bg-surface shadow-card transition-all 
+                        duration-200 ease-in-out hover:-translate-y-1 hover:shadow-cardHover">
 
-                </div>
+                        <img 
+                            src="assets/images/pets/example-dog.jpg" 
+                            alt="Bella the Golden retriever"
+                            class="h-[245px] w-full object-cover">
 
-                <div id="pet-grid">
+                        <div class="flex h-[205px] flex-col p-5">
+
+                            <div>
+                                <h3 class="text-2xl font-semibold text-primary">
+                                    Bella
+                                </h3>
+
+                                <p class="mt-1 text-lg text-text">
+                                    Golden Retriever
+                                </p>
+                            </div>
+
+                            <div class="mt-4 flex gap-2">
+
+                                <span class="inline-flex items-center gap-2 rounded-md bg-ageBg px-2 py-1 text-sm font-medium text-primary">
+                                    <img 
+                                        src="assets/icons/ui/paw.svg" 
+                                        alt=""
+                                        class="h-4 w-4">
+                                    2 Years
+                                </span>
+                                
+                                <span class="inline-flex items-center gap-2 rounded-md bg-sizeMediumBg px-2 py-1 text-sm font-medium text-sizeMedium">
+                                    <img 
+                                        src="assets/icons/ui/size-medium.svg" 
+                                        alt=""
+                                        class="h-4 w-4">
+                                    Medium size
+                                </span>
+
+                            </div>
+
+                            <a 
+                                href="#"
+                                class="group mt-auto inline-flex items-center gap-2 text-primary font-medium transition-all duration-200 ease-in-out hover:text-primaryHover group-hover:underline hover:decoration-primaryHover">
+                                View details
+
+                                <img 
+                                    src="assets/icons/ui/arrow-right.svg" 
+                                    alt=""
+                                    class="h-4 w-4 transition-transform duration-200 ease-in-out group-hover:-rotate-45">
+                            </a>
+
+                        </div>
+
+                    </article>
 
                 </div>
 
@@ -103,7 +323,127 @@
 
     </main>
 
-    <footer id="footer"></footer>
+    <footer class="bg-surface">
+
+        <div class="container-custom border-t border-divider py-16">
+
+            <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-16">
+
+                <div class="flex justify-center">
+
+                    <div class="flex flex-col gap-4 items-start text-left">
+
+                        <img 
+                            src="assets/images/logo/footer-logo.svg" 
+                            alt=""
+                            class="w-32">
+
+                            <p class="text-base text-primary">
+                                Helping pets find loving homes
+                            </p>
+
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center">
+
+                    <div class="flex flex-col gap-4 items-start text-left">
+
+                        <h3 class="text-xl font-semibold text-primary">
+                            Quick links
+                        </h3>
+
+                        <nav aria-label="Footer navigation" class="flex flex-col items-start gap-4">
+
+                            <a 
+                                href="index.html"
+                                class="text-base text-primary transition-colors duration-200 hover:text-primaryHover hover:underline">
+                                Home
+                            </a>
+
+                            <a 
+                                href="about/index.html"
+                                class="text-base text-primary transition-colors duration-200 hover:text-primaryHover hover:underline"
+                                >About
+                            </a>
+
+                            <a 
+                                href="contact/index.html" 
+                                class="text-base text-primary transition-colors duration-200 hover:text-primaryHover hover:underline">
+                                Contact
+                            </a>
+
+                        </nav>
+
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center">
+
+                    <div class="flex flex-col gap-4 items-start text-left">
+
+                        <h3 class="text-xl font-semibold text-primary">
+                            Contact
+                        </h3>
+
+                        <p class="text-base text-primary">hello@petpals.no</p>
+
+                        <p class="text-base text-primary">+47 123 45 678</p>
+
+                        <p class="text-base text-primary">Oslo, Norway</p>
+
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center">
+
+                    <div class="flex flex-col gap-6 items-center">
+
+                        <h3 class="text-xl font-semibold text-primary">
+                            Follow us
+                        </h3>
+
+                        <div class="flex items-center gap-3">
+
+                            <a href="#" aria-label="Facebook">
+                                <img 
+                                    src="assets/icons/social/facebook.svg" 
+                                    alt=""
+                                    class="h-6 w-6">
+                            </a>
+
+                            <a href="#" aria-label="Instagram">
+                                <img 
+                                    src="assets/icons/social/instagram.svg" 
+                                    alt=""
+                                    class="h-6 w-6">
+                            </a>
+
+                            <a href="#" aria-label="Twitter">
+                                <img 
+                                    src="assets/icons/social/twitter.svg" 
+                                    alt=""
+                                    class="h-6 w-6">
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="mt-12 translate-y-2 text-center text-sm text-primary">
+                © 2026 PetPals. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
     
 </body>
 </html>
