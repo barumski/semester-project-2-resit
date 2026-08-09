@@ -37,12 +37,12 @@ module.exports = {
         disabled: "#D6D6D6",
         divider: "#D6D6D6",
         ageBg: "#E8F3EC",
-        sizeSmall: "#2D5BD1",
-        sizeSmall_bg: "#E6F0FF",
-        sizeMedium: "#8A6D00",
-        sizeMediumBg: "#FFF3D6",
-        sizeLarge: "#95599A",
-        sizeLargeBg: "#E6D6FF"
+        male: "#2D5BD1",
+        maleBg: "#E6F0FF",
+        size: "#8A6D00",
+        sizeBg: "#FFF3D6",
+        female: "#EF4AFF",
+        femaleBg: "#F2D6FF"
       },
 
       borderRadius: {

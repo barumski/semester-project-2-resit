@@ -25,99 +25,242 @@
     <link rel="stylesheet" href="../css/output.css">
 
     <!-- Scripts -->
+     <script type="module" src="../js/main.js"></script>
 </head>
 
 
 <body>
 
-    <header id="header"></header>
+    <header id="header-container" class="sticky top-0 z-50 bg-surface shadow-sm">
+
+        <div class="container-custom flex h-20 items-center justify-between">
+            <a href="../index.html" class="shrink-0">
+                <img src="../assets/images/logo/header-logo.svg" alt="PetPals" class="w-36">
+            </a>
+
+            <nav id="main-navigation" aria-label="Primary navigation" class="hidden lg:flex lg:items-center lg:gap-10">
+                <a href="../index.html"
+                class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">Home</a>
+                <a href="../about/index.html"
+                class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">About</a>
+                <a href="../contact/index.html"
+                class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">Contact</a>
+            </nav>
+
+            <div id="auth-buttons" class="hidden items-center gap-4 lg:flex">
+                <a href="../account/login/index.html"
+                class="flex h-12 w-24 items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
+                text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">Log In</a>
+                <a href="../account/register/index.html"
+                class="flex h-12 w-24 items-center justify-center rounded-xl bg-primary text-base font-medium 
+                text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">Register</a>
+            </div>
+
+            <button 
+                id="menu-button"
+                type="button" 
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobile-navigation"
+                class="ml-2 flex h-11 w-11 items-center justify-center lg:hidden">
+
+                <img 
+                    src="../assets/icons/ui/menu.svg" 
+                    alt="" 
+                    class="h-6 w-6">
+            </button>
+
+        </div>
+
+        <div
+            id="mobile-menu-overlay"
+            class="fixed inset-0 z-40 hidden bg-black/50 lg:hidden">
+        </div>
+
+        <nav 
+            id="mobile-navigation"
+            aria-label="Mobile navigation"
+            class="fixed left-0 top-0 z-50 hidden h-screen w-3/4 bg-surface shadow-xl lg:hidden">
+
+            <div class="flex h-full flex-col px-6 pt-2 pb-6">
+
+                <img 
+                    src="../assets/images/logo/header-logo.svg" 
+                    alt="PetPals"
+                    class="mx-auto mt-2 w-36">
+
+                <p id="mobile-username" class="mt-6 min-h-6 text-center text-lg font-medium text-primary"></p>
+
+                <div class="mt-8 flex flex-col gap-6 border-t border-divider pt-6">
+
+                    <a 
+                        href="../index.html"
+                        class="flex items-center gap-3 py-2 text-base font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:decoration-primaryHover">
+                            <img 
+                                src="../assets/icons/ui/home.svg" 
+                                alt=""
+                                class="h-4 w-4">
+                        Home
+                    </a>
+
+                    <a 
+                        href="../about/index.html"
+                        class="flex items-center gap-3 py-2 text-base font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:decoration-primaryHover">
+                            <img 
+                                src="../assets/icons/ui/about.svg" 
+                                alt=""
+                                class="h-4 w-4">
+                        About
+                    </a>
+                    
+                    <a 
+                        href="../contact/index.html"
+                        class="flex items-center gap-3 py-2 text-base font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:decoration-primaryHover">
+                            <img 
+                                src="../assets/icons/ui/phone.svg" 
+                                alt=""
+                                class="h-4 w-4">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <div class="mt-auto flex flex-col gap-4">
+                    <a 
+                        href="../account/login/index.html"
+                        class="flex h-12 w-full items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
+                        text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
+                        Log In
+                    </a>
+
+                    <a 
+                        href="../account/register/index.html"
+                        class="flex h-12 w-full items-center justify-center rounded-xl bg-primary text-base font-medium 
+                        text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
+                        Register
+                    </a>
+
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
 
     <main>
 
-        <section id="pet-details">
+        <section id="pet-details" class="container-custom py-16">
 
-            <a href="../index.html">← Back to Home</a>
+            <a 
+                href="../index.html"
+                class="inline-flex items-center gap-2">
+                ← Back to Home
+            </a>
 
-            <div>
+            <div class="mt-10 grid gap-12 lg:grid-cols-2">
 
                 <div>
-                    <img src="" alt="">
+                    <div
+                        id="pet-image-wrapper"
+                        class="bg-disabled">
+
+                            <img
+                                id="pet-image" 
+                                src="" 
+                                alt="">
+                    </div>                    
                 </div>
 
                 <div>
 
-                    <div>
-                        <h1 id="pet-name"></h1>
+                    <h1 id="pet-name"></h1>
 
-                        <div id="pet-tags"></div>
-                    </div>
+                    <section class="mt-10">
 
-                    <section>
-                        <div>
-                            <h2>About <span id="about-pet-name"></span></h2>
+                        <div class="flex items-center gap-2">
 
-                            <img src="" alt="">
+                            <h2 id="about-heading">About</h2>
+
+                            <img 
+                                src="../assets/icons/ui/paw.svg" 
+                                alt=""
+                                class="h-5 w-5">
                         </div>
 
-                        <div>
+                        <p id="pet-description" class="mt-4"></p>
+
+                    </section>
+
+                    <section class="mt-10">
+
+                        <div class="flex items-center gap-2">
+
+                            <h2>Pet Details</h2>
+
+                            <img 
+                                src="../assets/icons/ui/paw.svg" 
+                                alt=""
+                                class="h-5 w-5">
+                        </div>
+
+                        <div class="mt-6">
 
                             <div>
-
                                 <p>Breed</p>
-
                                 <p id="pet-breed"></p>
-
                             </div>
 
                             <div>
-
                                 <p>Age</p>
-
                                 <p id="pet-age"></p>
-                                
                             </div>
 
                             <div>
-
                                 <p>Size</p>
-
                                 <p id="pet-size"></p>
-                                
                             </div>
 
                             <div>
-
                                 <p>Gender</p>
-
                                 <p id="pet-gender"></p>
-                                
+                            </div>
+
+                            <div>
+                                <p>Species</p>
+                                <p id="pet-species"></p>
+                            </div>
+
+                            <div>
+                                <p>Color</p>
+                                <p id="pet-color"></p>
+                            </div>
+
+                            <div>
+                                <p>Status</p>
+                                <p id="pet-status"></p>
                             </div>
 
                         </div>
 
                     </section>
 
-                    <div id="pet-actions">
+                    <button
+                        id="adopt-button"
+                        type="button"
+                        class="mt-10">
+                        Adopt
+                    </button>
 
-                        <button 
-                            id="share-button" 
-                            type="button"
-                            aria-label="Share pet"
-                            title="Share">
+                    <button 
+                        id="share-button" 
+                        type="button"
+                        aria-label="Share pet"
+                        title="Share">
 
                             <img src="../assets/icons/ui/share.svg" alt="">
 
-                        </button>
-
-                        <button id="adopt-button" type="button">Adopt</button>
-
-                        <div id="admin-actions" hidden>
-                            <a id="edit-pet-link" href="./edit/index.html">Edit</a>
-
-                            <button id="delete-pet-button" type="button">Delete</button>
-                        </div>
-
-                    </div>
+                    </button>
 
                 </div>
 
@@ -127,7 +270,127 @@
 
     </main>
     
-    <footer id="footer"></footer>
+    <footer class="bg-surface">
+
+        <div class="container-custom border-t border-divider py-16">
+
+            <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-16">
+
+                <div class="flex justify-center">
+
+                    <div class="flex flex-col gap-4 items-start text-left">
+
+                        <img 
+                            src="../assets/images/logo/footer-logo.svg" 
+                            alt=""
+                            class="w-32">
+
+                            <p class="text-base text-primary">
+                                Helping pets find loving homes
+                            </p>
+
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center">
+
+                    <div class="flex flex-col gap-4 items-start text-left">
+
+                        <h3 class="text-xl font-semibold text-primary">
+                            Quick links
+                        </h3>
+
+                        <nav aria-label="Footer navigation" class="flex flex-col items-start gap-4">
+
+                            <a 
+                                href="../index.html"
+                                class="text-base text-primary transition-colors duration-200 hover:text-primaryHover hover:underline">
+                                Home
+                            </a>
+
+                            <a 
+                                href="../about/index.html"
+                                class="text-base text-primary transition-colors duration-200 hover:text-primaryHover hover:underline"
+                                >About
+                            </a>
+
+                            <a 
+                                href="../contact/index.html" 
+                                class="text-base text-primary transition-colors duration-200 hover:text-primaryHover hover:underline">
+                                Contact
+                            </a>
+
+                        </nav>
+
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center">
+
+                    <div class="flex flex-col gap-4 items-start text-left">
+
+                        <h3 class="text-xl font-semibold text-primary">
+                            Contact
+                        </h3>
+
+                        <p class="text-base text-primary">hello@petpals.no</p>
+
+                        <p class="text-base text-primary">+47 123 45 678</p>
+
+                        <p class="text-base text-primary">Oslo, Norway</p>
+
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center">
+
+                    <div class="flex flex-col gap-6 items-center">
+
+                        <h3 class="text-xl font-semibold text-primary">
+                            Follow us
+                        </h3>
+
+                        <div class="flex items-center gap-3">
+
+                            <a href="#" aria-label="Facebook">
+                                <img 
+                                    src="../assets/icons/social/facebook.svg" 
+                                    alt=""
+                                    class="h-6 w-6">
+                            </a>
+
+                            <a href="#" aria-label="Instagram">
+                                <img 
+                                    src="../assets/icons/social/instagram.svg" 
+                                    alt=""
+                                    class="h-6 w-6">
+                            </a>
+
+                            <a href="#" aria-label="Twitter">
+                                <img 
+                                    src="../assets/icons/social/twitter.svg" 
+                                    alt=""
+                                    class="h-6 w-6">
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="mt-12 translate-y-2 text-center text-sm text-primary">
+                © 2026 PetPals. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
     
 </body>
 </html>

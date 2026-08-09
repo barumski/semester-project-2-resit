@@ -31,7 +31,6 @@ export function initializeSearch() {
         }
 
         function clearSearch() {
-
             if (!searchInput.value.trim()) {
                 return;
             }
@@ -39,6 +38,8 @@ export function initializeSearch() {
             searchInput.value = "";
 
             updateSearchIcon();
+
+            searchInput.dispatchEvent(new CustomEvent("searchClear"));
 
             searchInput.focus();
         }
