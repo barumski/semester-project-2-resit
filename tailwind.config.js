@@ -5,7 +5,7 @@ module.exports = {
     "./about/**/*.html",
     "./contact/**/*.html",
     "./account/**/*.html",
-    "./pet/**/*.html",
+    "./pets/**/*.html",
     "./js/**/*.js"
   ],
   theme: {
@@ -31,8 +31,11 @@ module.exports = {
         surface: "#FFFFFF",
         text: "#2D2D2D",
         success: "#4CAF50",
+        successBg: "#EAF7EC",
         warning: "#D8B46A",
+        warningBg: "#FFF7E6",
         danger: "#D9534F",
+        dangerBg: "#FCECEC",
         dangerHover: "#AF423E",
         disabled: "#D6D6D6",
         divider: "#D6D6D6",

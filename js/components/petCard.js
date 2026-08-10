@@ -1,3 +1,5 @@
+import { capitalize } from "../utils/formatText.js";
+
 function getGenderTag(gender) {
     const normalizedGender = gender?.toLowerCase();
 
@@ -80,7 +82,7 @@ export function createPetCard(pet) {
                             alt=""
                             class="h-4 w-4">
                             
-                        ${pet.size}
+                        ${capitalize(pet.size)}
                     </span>
 
                 </div>

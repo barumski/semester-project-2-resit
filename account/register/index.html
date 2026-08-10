@@ -22,9 +22,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../css/output.css">
+    <link rel="stylesheet" href="../../css/output.css">
 
     <!-- Scripts -->
+     <script type="module" src="../../js/main.js"></script>
 </head>
 
 
@@ -98,7 +99,16 @@
                                 placeholder="Enter your password">
                         </div>
 
-                        <div id="message-container"></div>
+                        <div 
+                            id="message-container"
+                            class="mb-4"
+                            aria-live="polite">
+
+                            <img 
+                                src="${style.icon}" 
+                                alt=""
+                                class="h-5 w-5">
+                        </div>
 
                         <button type="submit">Register</button>
 

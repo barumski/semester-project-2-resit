@@ -154,41 +154,53 @@
 
             <a 
                 href="../index.html"
-                class="inline-flex items-center gap-2">
+                class="inline-flex items-center gap-2 text-base font-medium text-primary transition-colors duration-200 hover:text-primaryHover hover:underline">
                 ← Back to Home
             </a>
 
-            <div class="mt-10 grid gap-12 lg:grid-cols-2">
+            <div class="mt-12 grid gap-12 lg:grid-cols-2">
+
+                <div
+                    id="pet-image-wrapper"
+                    class="relative h-[520px] w-full overflow-hidden rounded-2xl bg-disabled shadow-card">
+
+                        <img
+                            id="pet-image" 
+                            src="" 
+                            alt=""
+                            class="h-full w-full object-cover">
+
+                        <div
+                            id="pet-image-placeholder"
+                            class="absolute inset-0 hidden items-center justify-center bg-disabled text-sm text-text">
+                            No image available
+                        </div>
+                </div>                    
 
                 <div>
-                    <div
-                        id="pet-image-wrapper"
-                        class="bg-disabled">
 
-                            <img
-                                id="pet-image" 
-                                src="" 
-                                alt="">
-                    </div>                    
-                </div>
-
-                <div>
-
-                    <h1 id="pet-name"></h1>
+                    <h1 
+                        id="pet-name"
+                        class="font-heading text-4xl font-semibold text-primary"></h1>
 
                     <section class="mt-10">
 
                         <div class="flex items-center gap-2">
 
-                            <h2 id="about-heading">About</h2>
-
                             <img 
                                 src="../assets/icons/ui/paw.svg" 
                                 alt=""
                                 class="h-5 w-5">
+
+                            <h2 
+                                id="about-heading"
+                                class="font-heading text-2xl font-semibold text-primary">About</h2>
+
                         </div>
 
-                        <p id="pet-description" class="mt-4"></p>
+                        <p 
+                            id="pet-description" 
+                            class="mt-4 max-w-xl leading-relaxed font-medium text-text"></p>
 
                     </section>
 
@@ -196,71 +208,135 @@
 
                         <div class="flex items-center gap-2">
 
-                            <h2>Pet Details</h2>
-
                             <img 
                                 src="../assets/icons/ui/paw.svg" 
                                 alt=""
                                 class="h-5 w-5">
+
+                            <h2 class="font-heading text-2xl font-semibold text-primary">
+                                Pet Details
+                            </h2>
+
                         </div>
 
-                        <div class="mt-6">
+                        <div class="mt-6 grid grid-cols-2 gap-x-8 gap-y-4">
 
                             <div>
-                                <p>Breed</p>
-                                <p id="pet-breed"></p>
+                                <p class="font-semibold text-primary">Breed:</p>
+                                <p id="pet-breed" class="mt-1 font-medium text-text"></p>
                             </div>
 
                             <div>
-                                <p>Age</p>
-                                <p id="pet-age"></p>
+                                <p class="font-semibold text-primary">Age:</p>
+                                <p id="pet-age" class="mt-1 font-medium text-text"></p>
                             </div>
 
                             <div>
-                                <p>Size</p>
-                                <p id="pet-size"></p>
+                                <p class="font-semibold text-primary">Size:</p>
+                                <p id="pet-size" class="mt-1 font-medium text-text"></p>
                             </div>
 
                             <div>
-                                <p>Gender</p>
-                                <p id="pet-gender"></p>
+                                <p class="font-semibold text-primary">Gender:</p>
+                                <p id="pet-gender" class="mt-1 font-medium text-text"></p>
                             </div>
 
                             <div>
-                                <p>Species</p>
-                                <p id="pet-species"></p>
+                                <p class="font-semibold text-primary">Species:</p>
+                                <p id="pet-species" class="mt-1 font-medium text-text"></p>
                             </div>
 
                             <div>
-                                <p>Color</p>
-                                <p id="pet-color"></p>
+                                <p class="font-semibold text-primary">Color:</p>
+                                <p id="pet-color" class="mt-1 font-medium text-text"></p>
                             </div>
 
                             <div>
-                                <p>Status</p>
-                                <p id="pet-status"></p>
+                                <p class="font-semibold text-primary">Status:</p>
+                                <p id="pet-status" class="mt-1 font-medium text-text"></p>
                             </div>
 
                         </div>
 
                     </section>
 
-                    <button
-                        id="adopt-button"
-                        type="button"
-                        class="mt-10">
-                        Adopt
-                    </button>
+                    <div id="public-actions" class="mt-10 flex items-center gap-6">
 
-                    <button 
-                        id="share-button" 
-                        type="button"
-                        aria-label="Share pet"
-                        title="Share">
+                        <button
+                            id="adopt-button"
+                            type="button"
+                            class="h-12 w-28 items-center justify-center rounded-xl bg-primary text-base font-medium 
+                            text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
+                            Adopt
+                        </button>
 
-                            <img src="../assets/icons/ui/share.svg" alt="">
+                        <div class="relative inline-flex group">
 
-                    </button>
+                            <button 
+                                data-share-button 
+                                type="button"
+                                aria-label="Share pet"
+                                title="Share"
+                                class="flex h-10 w-10 items-center jusify-center rounded-lg transition-all duration hover:-translate-y-1">
+
+                                    <img 
+                                        src="../assets/icons/ui/share.svg" 
+                                        alt=""
+                                        class="h-5 w-5">
+
+                            </button>
+                    
+                            <span 
+                                data-share-tooltip
+                                class="pointer-events-none absolute left-1/2 top-full mt-1 -translate-x-1/2 whitespace-nowrap border border-divider bg-surface px-1.5 py-0.5 text-xs font-medium text-text opacity-0 shadow-sm transition-opacity duration-200 group-hover:opacity-100">
+                                Share
+                            </span>
+
+                        </div>
+
+                    <div 
+                        id="admin-actions" class="mt-10 hidden items-center gap-6">
+                    
+                        <button
+                            id="edit-button"
+                            type="button"
+                            class="h-12 w-28 items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
+                            text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
+                            Edit
+                        </button>
+
+                        <button
+                            id="delete-button"
+                            type="button"
+                            class="h-12 w-28 items-center justify-center rounded-xl bg-danger text-base font-medium 
+                            text-surface transition-all duration-200 ease-in-out hover:bg-dangerHover">
+                            Delete
+                        </button>
+                        
+                        <div class="relative inline-flex group">
+
+                            <button 
+                                data-share-button 
+                                type="button"
+                                aria-label="Share pet"
+                                title="Share"
+                                class="flex h-10 w-10 items-center jusify-center rounded-lg transition-all duration hover:-translate-y-1">
+
+                                    <img 
+                                        src="../assets/icons/ui/share.svg" 
+                                        alt=""
+                                        class="h-5 w-5">
+
+                            </button>
+                    
+                            <span 
+                                data-share-tooltip
+                                class="pointer-events-none absolute left-1/2 top-full mt-1 -translate-x-1/2 whitespace-nowrap border border-divider bg-surface px-1.5 py-0.5 text-xs font-medium text-text opacity-0 shadow-sm transition-opacity duration-200 group-hover:opacity-100">
+                                Share
+                            </span>
+
+                        </div>                        
+                    </div>
 
                 </div>
 
