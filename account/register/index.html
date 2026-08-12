@@ -25,99 +25,308 @@
     <link rel="stylesheet" href="../../css/output.css">
 
     <!-- Scripts -->
-     <script type="module" src="../../js/main.js"></script>
+    <script type="module" src="../../js/main.js"></script>
 </head>
 
 
 <body>
 
-    <header id="header"></header>
+    <header id="header-container" class="sticky top-0 z-50 bg-surface shadow-sm">
 
-    <main>
+        <div class="container-custom flex h-20 items-center justify-between">
+            <a href="../../index.html" class="shrink-0">
+                <img src="../../assets/images/logo/header-logo.svg" alt="PetPals" class="w-36">
+            </a>
 
-        <section id="register">
+            <nav id="main-navigation" aria-label="Primary navigation" class="hidden lg:flex lg:items-center lg:gap-10">
+                <a href="../../index.html"
+                class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">Home</a>
+                <a href="../../about/index.html"
+                class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">About</a>
+                <a href="../../contact/index.html"
+                class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">Contact</a>
+            </nav>
 
-            <a href="../../index.html">← Back to Home</a>
+            <div 
+                data-auth-logged-out 
+                class="hidden items-center gap-4">
 
-            <div>
+                <a 
+                    href="../login/index.html"
+                    class="flex h-12 w-24 items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
+                    text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
+                    Log In
+                </a>
+                    
+                <a 
+                    href="./index.html"
+                    class="flex h-12 w-24 items-center justify-center rounded-xl bg-primary text-base font-medium 
+                    text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
+                    Register
+                </a>
 
-                <div>
+            </div>
 
-                    <div>
+            <div
+                data-auth-logged-in
+                class="hidden items-center gap-4">
+                
+                <a 
+                    href="../../pets/create/index.html"
+                    class="flex h-12 w-24 items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
+                    text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
+                    Create
+                </a>
 
-                        <img src="" alt="">
+                <button 
+                    data-logout-button
+                    type="button"
+                    class="flex h-12 w-24 items-center justify-center rounded-xl bg-primary text-base font-medium 
+                    text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
+                    Log Out
+                </button>                
+                    
+                    
+            </div>
 
-                        <h1>Create an Account</h1>
+            <button 
+                id="menu-button"
+                type="button" 
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobile-navigation"
+                class="ml-2 flex h-11 w-11 items-center justify-center lg:hidden">
 
-                    </div>
+                <img 
+                    src="../../assets/icons/ui/menu.svg" 
+                    alt="" 
+                    class="h-6 w-6">
+            </button>
 
-                    <p>Create an account to manage pets and help them find loving homes</p>
+        </div>
+
+        <div
+            id="mobile-menu-overlay"
+            class="fixed inset-0 z-40 hidden bg-black/50 lg:hidden">
+        </div>
+
+        <nav 
+            id="mobile-navigation"
+            aria-label="Mobile navigation"
+            class="fixed left-0 top-0 z-50 hidden h-screen w-3/4 bg-surface shadow-xl lg:hidden">
+
+            <div class="flex h-full flex-col px-6 pt-2 pb-6">
+
+                <img 
+                    src="../../assets/images/logo/header-logo.svg" 
+                    alt="PetPals"
+                    class="mx-auto mt-2 w-36">
+
+                <p id="mobile-username" class="mt-6 min-h-6 text-center text-lg font-medium text-primary"></p>
+
+                <div class="mt-8 flex flex-col gap-6 border-t border-divider pt-6">
+
+                    <a 
+                        href="../../index.html"
+                        class="flex items-center gap-3 py-2 text-base font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:decoration-primaryHover">
+                            <img 
+                                src="../../assets/icons/ui/home.svg" 
+                                alt=""
+                                class="h-4 w-4">
+                        Home
+                    </a>
+
+                    <a 
+                        href="../../about/index.html"
+                        class="flex items-center gap-3 py-2 text-base font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:decoration-primaryHover">
+                            <img 
+                                src="../../assets/icons/ui/about.svg" 
+                                alt=""
+                                class="h-4 w-4">
+                        About
+                    </a>
+                    
+                    <a 
+                        href="../../contact/index.html"
+                        class="flex items-center gap-3 py-2 text-base font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:decoration-primaryHover">
+                            <img 
+                                src="../../assets/icons/ui/phone.svg" 
+                                alt=""
+                                class="h-4 w-4">
+                        Contact
+                    </a>
 
                 </div>
 
-                <div>
+                <div 
+                    data-auth-logged-out
+                    class="mt-auto hidden flex-col gap-4">
 
-                    <div>
+                    <a 
+                        href="../login/index.html"
+                        class="flex h-12 w-full items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
+                        text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
+                        Log In
+                    </a>
 
-                        <h2>Register</h2>
+                    <a 
+                        href="./index.html"
+                        class="flex h-12 w-full items-center justify-center rounded-xl bg-primary text-base font-medium 
+                        text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
+                        Register
+                    </a>
 
-                        <p>Fill in the information below to create your account</p>
+                </div>
+
+                <div
+                    data-auth-logged-in
+                    class="mt-auto hidden flex-col gap-4">
+                    
+                    <a 
+                        href="../../pets/create/index.html"
+                        class="flex h-12 w-full items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
+                        text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
+                        Create
+                    </a>
+
+                    <button
+                        data-logout-button 
+                        class="flex h-12 w-full items-center justify-center rounded-xl bg-primary text-base font-medium 
+                        text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
+                        Log Out
+                    </button>
+                
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section id="register" class="container-custom py-16">
+
+             <a 
+                href="../../index.html"
+                class="inline-flex items-center gap-2 text-base font-medium text-primary transition-colors duration-200 hover:text-primaryHover hover:underline">
+                ← Back to Home
+            </a>
+
+            <div class="mt-12 flex flex-col items-center">
+
+                <div class="flex flex-col items-center text-center">
+
+                    <div class="flex items-center gap-3">
+
+                        <img 
+                            src="../../assets/icons/ui/paw.svg" 
+                            alt=""
+                            class="h-8 w-8">
+
+                        <h1 class="text-4xl font-semibold text-primary">
+                            Create an Account
+                        </h1>
+
+                    </div>
+
+                    <p class="mt-8 text-xl font-medium text-primary">
+                        Create an account to manage pets and help them find loving homes
+                    </p>
+
+                </div>
+
+                <div class="mt-12 w-full max-w-[460px] rounded-2xl border border-divider bg-surface p-8 shadow-card">
+
+                    <div class="text-center">
+
+                        <h2 class="text-2xl font-semibold text-primary">
+                            Register
+                        </h2>
+
+                        <p class="mt-3 text-base font-medium text-text">
+                            Fill in the information below to create your account
+                        </p>
 
                     </div>
 
                 
 
-                    <form id="register-form">
+                    <form id="register-form" class="mt-8 flex flex-col gap-6">
 
-                        <div>
-                            <label for="name">Username</label>
+                        <div class="flex flex-col gap-2">
+
+                            <label 
+                                for="name"
+                                class="text-base font-medium text-text">
+                                Username
+                            </label>
+
                             <input 
                                 id="name"
                                 name="name"
                                 type="text"
                                 required
-                                placeholder="Enter your username">
+                                placeholder="Enter your username"
+                                class="h-12 w-full rounded-xl border shadow-input border-divider bg-surface px-4 text-base text-text outline-none transition-colors duration-200 focus:border-primary">
+
                         </div>
 
-                        <div>
-                            <label for="email">Email</label>
+                        <div class="flex flex-col gap-2">
+
+                            <label 
+                                for="email"
+                                class="text-base font-medium text-text">
+                                Email
+                            </label>
+
                             <input 
                                 id="email"
                                 name="email"    
-                                type="text"
+                                type="email"
                                 required
-                                placeholder="Enter your email">
+                                placeholder="Enter your email"
+                                class="h-12 w-full rounded-xl border shadow-input border-divider bg-surface px-4 text-base text-text outline-none transition-colors duration-200 focus:border-primary">
                         </div>
 
-                        <div>
-                            <label for="password">Password</label>
+                        <div class="flex flex-col gap-2">
+
+                            <label 
+                                for="password"
+                                class="text-base font-medium text-text">
+                                Password
+                            </label>
+
                             <input
                                 id="password"
                                 name="password"
                                 type="password"
                                 required
-                                placeholder="Enter your password">
+                                placeholder="Enter your password"
+                                class="h-12 w-full rounded-xl border shadow-input border-divider bg-surface px-4 text-base text-text outline-none transition-colors duration-200 focus:border-primary">
                         </div>
 
                         <div 
                             id="message-container"
                             class="mb-4"
                             aria-live="polite">
-
-                            <img 
-                                src="${style.icon}" 
-                                alt=""
-                                class="h-5 w-5">
                         </div>
 
-                        <button type="submit">Register</button>
+                        <button 
+                            type="submit"
+                            class="mt-2 w-full rounded-lg bg-primary px-6 py-3 font-semibold text-surface transition-all duration-200 hover:bg-primaryHover">
+                            Register
+                        </button>
 
                     </form>
 
-                
-
-                    <p>Already have an account?
-                        <a href="../login/index.html">Log In</a>
+                    <p class="mt-8 text-center text-base text-text">
+                        Already have an account?
+                        <a 
+                            href="../login/index.html"
+                            class="font-medium text-primary transition-colors duration-200 hover:text-primaryHover hover:underline">
+                            Log In
+                        </a>
                     </p>
 
                 </div>
@@ -128,7 +337,127 @@
         
     </main>
     
-    <footer id="footer"></footer>
+    <footer class="bg-surface">
+
+        <div class="container-custom border-t border-divider py-16">
+
+            <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-16">
+
+                <div class="flex justify-center">
+
+                    <div class="flex flex-col gap-4 items-start text-left">
+
+                        <img 
+                            src="../../assets/images/logo/footer-logo.svg" 
+                            alt=""
+                            class="w-32">
+
+                            <p class="text-base text-primary">
+                                Helping pets find loving homes
+                            </p>
+
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center">
+
+                    <div class="flex flex-col gap-4 items-start text-left">
+
+                        <h3 class="text-xl font-semibold text-primary">
+                            Quick links
+                        </h3>
+
+                        <nav aria-label="Footer navigation" class="flex flex-col items-start gap-4">
+
+                            <a 
+                                href="../../index.html"
+                                class="text-base text-primary transition-colors duration-200 hover:text-primaryHover hover:underline">
+                                Home
+                            </a>
+
+                            <a 
+                                href="../../about/index.html"
+                                class="text-base text-primary transition-colors duration-200 hover:text-primaryHover hover:underline"
+                                >About
+                            </a>
+
+                            <a 
+                                href="../../contact/index.html" 
+                                class="text-base text-primary transition-colors duration-200 hover:text-primaryHover hover:underline">
+                                Contact
+                            </a>
+
+                        </nav>
+
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center">
+
+                    <div class="flex flex-col gap-4 items-start text-left">
+
+                        <h3 class="text-xl font-semibold text-primary">
+                            Contact
+                        </h3>
+
+                        <p class="text-base text-primary">hello@petpals.no</p>
+
+                        <p class="text-base text-primary">+47 123 45 678</p>
+
+                        <p class="text-base text-primary">Oslo, Norway</p>
+
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center">
+
+                    <div class="flex flex-col gap-6 items-center">
+
+                        <h3 class="text-xl font-semibold text-primary">
+                            Follow us
+                        </h3>
+
+                        <div class="flex items-center gap-3">
+
+                            <a href="#" aria-label="Facebook">
+                                <img 
+                                    src="../../assets/icons/social/facebook.svg" 
+                                    alt=""
+                                    class="h-6 w-6">
+                            </a>
+
+                            <a href="#" aria-label="Instagram">
+                                <img 
+                                    src="../../assets/icons/social/instagram.svg" 
+                                    alt=""
+                                    class="h-6 w-6">
+                            </a>
+
+                            <a href="#" aria-label="Twitter">
+                                <img 
+                                    src="../../assets/icons/social/twitter.svg" 
+                                    alt=""
+                                    class="h-6 w-6">
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="mt-12 translate-y-2 text-center text-sm text-primary">
+                © 2026 PetPals. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
     
 </body>
 </html>

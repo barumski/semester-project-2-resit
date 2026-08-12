@@ -47,13 +47,46 @@
                 class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">Contact</a>
             </nav>
 
-            <div id="auth-buttons" class="hidden items-center gap-4 lg:flex">
-                <a href="account/login/index.html"
-                class="flex h-12 w-24 items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
-                text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">Log In</a>
-                <a href="account/register/index.html"
-                class="flex h-12 w-24 items-center justify-center rounded-xl bg-primary text-base font-medium 
-                text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">Register</a>
+            <div 
+                data-auth-logged-out 
+                class="hidden items-center gap-4">
+
+                <a 
+                    href="account/login/index.html"
+                    class="flex h-12 w-24 items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
+                    text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
+                    Log In
+                </a>
+                    
+                <a 
+                    href="account/register/index.html"
+                    class="flex h-12 w-24 items-center justify-center rounded-xl bg-primary text-base font-medium 
+                    text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
+                    Register
+                </a>
+
+            </div>
+
+            <div
+                data-auth-logged-in
+                class="hidden items-center gap-4">
+                
+                <a 
+                    href="pets/create/index.html"
+                    class="flex h-12 w-24 items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
+                    text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
+                    Create
+                </a>
+
+                <button 
+                    data-logout-button
+                    type="button"
+                    class="flex h-12 w-24 items-center justify-center rounded-xl bg-primary text-base font-medium 
+                    text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
+                    Log Out
+                </button>                
+                    
+                    
             </div>
 
             <button 
@@ -89,7 +122,10 @@
                     alt="PetPals"
                     class="mx-auto mt-2 w-36">
 
-                <p id="mobile-username" class="mt-6 min-h-6 text-center text-lg font-medium text-primary"></p>
+                <p 
+                    data-mobile-username 
+                    class="mt-6 min-h-6 text-center text-lg font-medium text-primary">
+                </p>
 
                 <div class="mt-8 flex flex-col gap-6 border-t border-divider pt-6">
 
@@ -125,8 +161,10 @@
 
                 </div>
 
+                <div 
+                    data-auth-logged-out
+                    class="mt-auto hidden flex-col gap-4">
 
-                <div class="mt-auto flex flex-col gap-4">
                     <a 
                         href="account/login/index.html"
                         class="flex h-12 w-full items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
@@ -141,6 +179,26 @@
                         Register
                     </a>
 
+                </div>
+
+                <div
+                    data-auth-logged-in
+                    class="mt-auto hidden flex-col gap-4">
+                    
+                    <a 
+                        href="pets/create/index.html"
+                        class="flex h-12 w-full items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
+                        text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
+                        Create
+                    </a>
+
+                    <button
+                        data-logout-button 
+                        class="flex h-12 w-full items-center justify-center rounded-xl bg-primary text-base font-medium 
+                        text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
+                        Log Out
+                    </button>
+                
                 </div>
 
             </div>

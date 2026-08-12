@@ -34,26 +34,58 @@
     <header id="header-container" class="sticky top-0 z-50 bg-surface shadow-sm">
 
         <div class="container-custom flex h-20 items-center justify-between">
-            <a href="../index.html" class="shrink-0">
-                <img src="../assets/images/logo/header-logo.svg" alt="PetPals" class="w-36">
+            <a href="index.html" class="shrink-0">
+                <img src="assets/images/logo/header-logo.svg" alt="PetPals" class="w-36">
             </a>
 
             <nav id="main-navigation" aria-label="Primary navigation" class="hidden lg:flex lg:items-center lg:gap-10">
-                <a href="../index.html"
+                <a href="index.html"
                 class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">Home</a>
-                <a href="../about/index.html"
+                <a href="about/index.html"
                 class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">About</a>
-                <a href="../contact/index.html"
+                <a href="contact/index.html"
                 class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">Contact</a>
             </nav>
 
-            <div id="auth-buttons" class="hidden items-center gap-4 lg:flex">
-                <a href="../account/login/index.html"
-                class="flex h-12 w-24 items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
-                text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">Log In</a>
-                <a href="../account/register/index.html"
-                class="flex h-12 w-24 items-center justify-center rounded-xl bg-primary text-base font-medium 
-                text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">Register</a>
+            <div 
+                data-auth-logged-out 
+                class="hidden items-center gap-4 lg:flex">
+
+                <a 
+                    href="account/login/index.html"
+                    class="flex h-12 w-24 items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
+                    text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
+                    Log In
+                </a>
+                    
+                <a 
+                    href="account/register/index.html"
+                    class="flex h-12 w-24 items-center justify-center rounded-xl bg-primary text-base font-medium 
+                    text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
+                    Register
+                </a>
+
+            </div>
+
+            <div
+                data-auth-logged-in
+                class="hidden items-center gap-4">
+                
+                <a 
+                    href="pet/create/index.html"
+                    class="flex h-12 w-24 items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
+                    text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
+                    Create
+                </a>
+
+                <button 
+                    data-logout-button
+                    type="button"
+                    class="flex h-12 w-24 items-center justify-center rounded-xl bg-primary text-base font-medium 
+                    text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
+                    Log Out
+                </button>                
+                    
             </div>
 
             <button 
@@ -65,7 +97,7 @@
                 class="ml-2 flex h-11 w-11 items-center justify-center lg:hidden">
 
                 <img 
-                    src="../assets/icons/ui/menu.svg" 
+                    src="assets/icons/ui/menu.svg" 
                     alt="" 
                     class="h-6 w-6">
             </button>
@@ -85,39 +117,42 @@
             <div class="flex h-full flex-col px-6 pt-2 pb-6">
 
                 <img 
-                    src="../assets/images/logo/header-logo.svg" 
+                    src="assets/images/logo/header-logo.svg" 
                     alt="PetPals"
                     class="mx-auto mt-2 w-36">
 
-                <p id="mobile-username" class="mt-6 min-h-6 text-center text-lg font-medium text-primary"></p>
+                <p 
+                    data-mobile-username 
+                    class="mt-6 min-h-6 text-center text-lg font-medium text-primary">
+                </p>
 
                 <div class="mt-8 flex flex-col gap-6 border-t border-divider pt-6">
 
                     <a 
-                        href="../index.html"
+                        href="index.html"
                         class="flex items-center gap-3 py-2 text-base font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:decoration-primaryHover">
                             <img 
-                                src="../assets/icons/ui/home.svg" 
+                                src="assets/icons/ui/home.svg" 
                                 alt=""
                                 class="h-4 w-4">
                         Home
                     </a>
 
                     <a 
-                        href="../about/index.html"
+                        href="about/index.html"
                         class="flex items-center gap-3 py-2 text-base font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:decoration-primaryHover">
                             <img 
-                                src="../assets/icons/ui/about.svg" 
+                                src="assets/icons/ui/about.svg" 
                                 alt=""
                                 class="h-4 w-4">
                         About
                     </a>
                     
                     <a 
-                        href="../contact/index.html"
+                        href="contact/index.html"
                         class="flex items-center gap-3 py-2 text-base font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:decoration-primaryHover">
                             <img 
-                                src="../assets/icons/ui/phone.svg" 
+                                src="assets/icons/ui/phone.svg" 
                                 alt=""
                                 class="h-4 w-4">
                         Contact
@@ -125,22 +160,43 @@
 
                 </div>
 
+                <div 
+                    data-auth-logged-out
+                    class="mt-auto flex flex-col gap-4">
 
-                <div class="mt-auto flex flex-col gap-4">
                     <a 
-                        href="../account/login/index.html"
+                        href="account/login/index.html"
                         class="flex h-12 w-full items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
                         text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
                         Log In
                     </a>
 
                     <a 
-                        href="../account/register/index.html"
+                        href="account/register/index.html"
                         class="flex h-12 w-full items-center justify-center rounded-xl bg-primary text-base font-medium 
                         text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
                         Register
                     </a>
 
+                </div>
+
+                <div
+                    data-auth-logged-in
+                    class="mt-auto hidden flex-col gap-4">
+                    
+                    <a 
+                        href="pets/create/index.html"
+                        class="flex h-12 w-full items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
+                        text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
+                        Create
+                    </a>
+
+                    <button
+                        data-logout-button 
+                        class="flex h-12 w-full items-center justify-center rounded-xl bg-primary text-base font-medium 
+                        text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
+                        Log Out
+                    </button>
                 </div>
 
             </div>

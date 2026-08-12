@@ -5,6 +5,8 @@ import { initializeHome } from "./pages/home.js";
 import { initializePetDetails } from "./pages/petDetails.js";
 import { initializeSharePet } from "./components/sharePet.js";
 import { initializeRegister } from "./pages/register.js";
+import { initializeLogin } from "./pages/login.js";
+import { initializeAuthNavigation } from "./components/authNavigation.js";
 
 initializeMobileMenu();
 initializeSearch();
@@ -13,6 +15,8 @@ initializeHome();
 initializePetDetails();
 initializeSharePet();
 initializeRegister();
+initializeLogin();
+initializeAuthNavigation();
 
 
 
