@@ -3,24 +3,26 @@ export function displayMessage(type, message, container) {
         return;
     }
 
+    const basePath = "/semester-project-2-resit";
+
     const styles = {
         success: {
             text: "text-success",
             background: "bg-successBg",
             border: "border-success",
-            icon: "/assets/icons/ui/success.svg",
+            icon: `${basePath}/assets/icons/ui/success.svg`,
         },
         warning: {
             text: "text-warning",
             background: "bg-warningBg",
             border: "border-warning",
-            icon:"/assets/icons/ui/warning.svg",
+            icon:`${basePath}/assets/icons/ui/warning.svg`,
         },
         error: {
             text: "text-danger",
             background: "bg-dangerBg",
             border: "border-danger",
-            icon:"/assets/icons/ui/error.svg",
+            icon:`${basePath}/assets/icons/ui/error.svg`,
         },
     };
 
