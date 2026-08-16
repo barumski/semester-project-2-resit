@@ -826,14 +826,6 @@ button,
   margin-top: auto;
 }
 
-.mt-32 {
-  margin-top: 8rem;
-}
-
-.mt-52 {
-  margin-top: 13rem;
-}
-
 .flex {
   display: flex;
 }
@@ -902,32 +894,12 @@ button,
   height: 470px;
 }
 
-.h-\[600px\] {
-  height: 600px;
-}
-
-.h-full {
-  height: 100%;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
-.h-\[900px\] {
-  height: 900px;
-}
-
-.h-\[800px\] {
-  height: 800px;
-}
-
 .h-\[650px\] {
   height: 650px;
 }
 
-.max-h-full {
-  max-height: 100%;
+.h-full {
+  height: 100%;
 }
 
 .max-h-\[90vh\] {
@@ -1136,10 +1108,6 @@ button,
   overflow: hidden;
 }
 
-.overflow-y-auto {
-  overflow-y: auto;
-}
-
 .whitespace-nowrap {
   white-space: nowrap;
 }
@@ -1180,7 +1148,7 @@ button,
 
 .border-primary {
   --tw-border-opacity: 1;
-  border-color: rgb(79 125 90 / var(--tw-border-opacity, 1));
+  border-color: rgb(70 111 80 / var(--tw-border-opacity, 1));
 }
 
 .border-success {
@@ -1190,7 +1158,7 @@ button,
 
 .border-warning {
   --tw-border-opacity: 1;
-  border-color: rgb(216 180 106 / var(--tw-border-opacity, 1));
+  border-color: rgb(133 105 0 / var(--tw-border-opacity, 1));
 }
 
 .bg-ageBg {
@@ -1229,7 +1197,7 @@ button,
 
 .bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(79 125 90 / var(--tw-bg-opacity, 1));
+  background-color: rgb(70 111 80 / var(--tw-bg-opacity, 1));
 }
 
 .bg-sizeBg {
@@ -1452,7 +1420,7 @@ button,
 
 .text-female {
   --tw-text-opacity: 1;
-  color: rgb(239 74 255 / var(--tw-text-opacity, 1));
+  color: rgb(122 52 133 / var(--tw-text-opacity, 1));
 }
 
 .text-male {
@@ -1462,7 +1430,7 @@ button,
 
 .text-primary {
   --tw-text-opacity: 1;
-  color: rgb(79 125 90 / var(--tw-text-opacity, 1));
+  color: rgb(70 111 80 / var(--tw-text-opacity, 1));
 }
 
 .text-size {
@@ -1487,7 +1455,7 @@ button,
 
 .text-warning {
   --tw-text-opacity: 1;
-  color: rgb(216 180 106 / var(--tw-text-opacity, 1));
+  color: rgb(133 105 0 / var(--tw-text-opacity, 1));
 }
 
 .underline {
@@ -1495,7 +1463,7 @@ button,
 }
 
 .decoration-primary {
-  text-decoration-color: #4F7D5A;
+  text-decoration-color: #466F50;
 }
 
 .decoration-primaryHover {
@@ -1629,7 +1597,7 @@ button,
 
 .focus\:border-primary:focus {
   --tw-border-opacity: 1;
-  border-color: rgb(79 125 90 / var(--tw-border-opacity, 1));
+  border-color: rgb(70 111 80 / var(--tw-border-opacity, 1));
 }
 
 .group:hover .group-hover\:-rotate-45 {

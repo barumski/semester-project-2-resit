@@ -22,7 +22,7 @@ module.exports = {
       },
 
       colors: {
-        primary: "#4F7D5A",
+        primary: "#466F50",
         primaryHover: "#32553B",
         secondary: "#D8B46A",
         accent: "#A8C3A0",
@@ -32,7 +32,7 @@ module.exports = {
         text: "#2D2D2D",
         success: "#4CAF50",
         successBg: "#EAF7EC",
-        warning: "#D8B46A",
+        warning: "#856900",
         warningBg: "#FFF7E6",
         danger: "#D9534F",
         dangerBg: "#FCECEC",
@@ -44,7 +44,7 @@ module.exports = {
         maleBg: "#E6F0FF",
         size: "#8A6D00",
         sizeBg: "#FFF3D6",
-        female: "#EF4AFF",
+        female: "#7A3485",
         femaleBg: "#F2D6FF"
       },
 
