@@ -14,7 +14,13 @@ export async function initializeHome() {
     try {
         const response = await getAllPets();
 
-        const pets = response.data;
+        const pets = [...response.data].sort((a, b) => {
+            const dateA = new Date(a.updated || a.created);
+            const dateB = new Date(b.updated || b.created);
+
+            return dateB - dateA;
+        });
+        
         const itemsPerPage = 12;
         let currentPage = 1;
         let filteredPets = pets;

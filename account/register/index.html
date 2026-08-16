@@ -8,7 +8,7 @@
     content="Create a PetPals account and help pets find their forever homes.">
 
     <!-- Title -->
-    <title>PetPals | Register</title>
+    <title>PetPals - Register</title>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/favicon/apple-touch-icon.png">
@@ -113,7 +113,7 @@
         <nav 
             id="mobile-navigation"
             aria-label="Mobile navigation"
-            class="fixed left-0 top-0 z-50 hidden h-screen w-3/4 bg-surface shadow-xl lg:hidden">
+            class="fixed left-0 top-0 z-50 hidden h-[650px] max-h-[90vh] w-3/4 bg-surface shadow-xl lg:hidden">
 
             <div class="flex h-full flex-col px-6 pt-2 pb-6">
 
@@ -122,7 +122,10 @@
                     alt="PetPals"
                     class="mx-auto mt-2 w-36">
 
-                <p id="mobile-username" class="mt-6 min-h-6 text-center text-lg font-medium text-primary"></p>
+                <p 
+                    data-mobile-username
+                    class="mt-6 min-h-6 text-center text-lg font-medium text-primary">
+                </p>
 
                 <div class="mt-8 flex flex-col gap-6 border-t border-divider pt-6">
 
@@ -190,7 +193,8 @@
                     </a>
 
                     <button
-                        data-logout-button 
+                        data-logout-button
+                        type="button" 
                         class="flex h-12 w-full items-center justify-center rounded-xl bg-primary text-base font-medium 
                         text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
                         Log Out
@@ -213,30 +217,30 @@
                 ← Back to Home
             </a>
 
-            <div class="mt-12 flex flex-col items-center">
+            <div class="mt-12 flex flex-col items-center px-4 sm:px-0">
 
                 <div class="flex flex-col items-center text-center">
 
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2 lg:gap-3">
 
                         <img 
                             src="../../assets/icons/ui/paw.svg" 
                             alt=""
                             class="h-8 w-8">
 
-                        <h1 class="text-4xl font-semibold text-primary">
+                        <h1 class="text-3xl font-semibold text-primary lg:text-4xl">
                             Create an Account
                         </h1>
 
                     </div>
 
-                    <p class="mt-8 text-xl font-medium text-primary">
+                    <p class="mt-8 text-base font-medium text-primary lg:text-xl">
                         Create an account to manage pets and help them find loving homes
                     </p>
 
                 </div>
 
-                <div class="mt-12 w-full max-w-[460px] rounded-2xl border border-divider bg-surface p-8 shadow-card">
+                <div class="mt-12 w-full max-w-[460px] rounded-2xl border border-divider bg-surface p-8 shadow-card sm:p-10">
 
                     <div class="text-center">
 
@@ -345,7 +349,7 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-4 items-start text-left">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <img 
                             src="../../assets/images/logo/footer-logo.svg" 
@@ -362,13 +366,13 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-4 items-start text-left">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <h3 class="text-xl font-semibold text-primary">
                             Quick links
                         </h3>
 
-                        <nav aria-label="Footer navigation" class="flex flex-col items-start gap-4">
+                        <nav aria-label="Footer navigation" class="flex flex-col items-center gap-4 md:items-start">
 
                             <a 
                                 href="../../index.html"
@@ -396,7 +400,7 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-4 items-start text-left">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <h3 class="text-xl font-semibold text-primary">
                             Contact
@@ -414,7 +418,7 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-6 items-center">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <h3 class="text-xl font-semibold text-primary">
                             Follow us

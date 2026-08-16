@@ -8,7 +8,7 @@
     content="Create a new pet profile and help more pets find loving forever homes through PetPals.">
 
     <!-- Title -->
-    <title>PetPals | Create Pet</title>
+    <title>PetPals - Create Pet</title>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/favicon/apple-touch-icon.png">
@@ -39,7 +39,7 @@
             </a>
 
             <nav id="main-navigation" aria-label="Primary navigation" class="hidden lg:flex lg:items-center lg:gap-10">
-                <a href="index.html"
+                <a href="../../index.html"
                 class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">Home</a>
                 <a href="../../about/index.html"
                 class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">About</a>
@@ -49,7 +49,7 @@
 
             <div 
                 data-auth-logged-out 
-                class="hidden items-center gap-4 lg:flex">
+                class="hidden items-center gap-4">
 
                 <a 
                     href="../../account/login/index.html"
@@ -112,7 +112,7 @@
         <nav 
             id="mobile-navigation"
             aria-label="Mobile navigation"
-            class="fixed left-0 top-0 z-50 hidden h-screen w-3/4 bg-surface shadow-xl lg:hidden">
+            class="fixed left-0 top-0 z-50 hidden h-[650px] max-h-[90vh] w-3/4 bg-surface shadow-xl lg:hidden">
 
             <div class="flex h-full flex-col px-6 pt-2 pb-6">
 
@@ -162,7 +162,7 @@
 
                 <div 
                     data-auth-logged-out
-                    class="mt-auto flex flex-col gap-4">
+                    class="mt-auto hidden flex-col gap-4">
 
                     <a 
                         href="../../account/login/index.html"
@@ -192,7 +192,8 @@
                     </a>
 
                     <button
-                        data-logout-button 
+                        data-logout-button
+                        type="button" 
                         class="flex h-12 w-full items-center justify-center rounded-xl bg-primary text-base font-medium 
                         text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
                         Log Out
@@ -207,72 +208,237 @@
 
     <main>
 
-        <section id="create-pet">
+        <section id="create-pet" class="container-custom pt-16 pb-24">
 
-            <a href="../../index.html">← Back to Home</a>
+             <a 
+                href="../../index.html"
+                class="inline-flex items-center gap-2 text-base font-medium text-primary transition-colors duration-200 hover:text-primaryHover hover:underline">
+                ← Back to Home
+            </a>
 
-            <div>
+            <div class="mt-16 px-4 sm:px-0">
+
+                <div class="text-center">
                 
-                <div>
-                    <h1>Create Pet</h1>
-                    <p>Add a new pet profile and help them find a loving forever home</p>
+                    <div class="flex items-center justify-center gap-3">
+
+                        <img 
+                            src="../../assets/icons/ui/paw.svg" 
+                            alt=""
+                            class="h-8 w-8">
+
+                        <h1 class="text-3xl font-semibold text-primary">
+                            Create Pet
+                        </h1>
+
+                    </div>
+
+                    <p class="mt-6 text-base font-medium text-primary lg:text-lg">
+                        Add a new pet profile and help them find a loving forever home
+                    </p>
+
                 </div>
 
-                <form id="create-pet-form">
+                <form 
+                    id="create-pet-form"
+                    class="mx-auto mt-12 grid w-full max-w-4xl gap-6 rounded-2xl border border-divider bg-surface p-6 shadow-card sm:p-8 md:max-w-2xl lg:max-w-4xl lg:grid-cols-2">
 
-                    <div>
-                        <label for="pet-name">Name</label>
+                    <div class="flex flex-col gap-2">
+                        <label 
+                            for="pet-name"
+                            class="text-base font-medium text-primary">
+                            Name
+                        </label>
+
                         <input
                             id="pet-name"
                             name="name" 
                             type="text"
                             required
-                            placeholder="Enter the pets name">
+                            placeholder="Enter the pets name"
+                            class="h-12 w-full rounded-xl shadow-input border border-divider bg-surface px-4 text-base text-text outline-none transition-colors duration-200 focus:border-primary">
                     </div>
 
-                    <div>
-                        <label for="pet-age">Age</label>
+                    <div class="flex flex-col gap-2">
+                        <label 
+                            for="pet-breed"
+                            class="text-base font-medium text-primary">
+                            Breed
+                        </label>
+
+                        <input
+                            id="pet-breed"
+                            name="breed"
+                            type="text"
+                            placeholder="Enter the pets breed"
+                            class="h-12 w-full rounded-xl shadow-input border border-divider bg-surface px-4 text-base text-text outline-none transition-colors duration-200 focus:border-primary">
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label 
+                            for="pet-age"
+                            class="text-base font-medium text-primary">
+                            Age
+                        </label>
+
                         <input 
                             id="pet-age"
                             name="age"
                             type="number"
                             min="0"
                             required
-                            placeholder="Enter the pets age">
+                            placeholder="Enter the pets age"
+                            class="h-12 w-full rounded-xl shadow-input border border-divider bg-surface px-4 text-base text-text outline-none transition-colors duration-200 focus:border-primary">
                     </div>
 
-                    <div>
-                        <label for="pet-size">Size</label>
-                        <select id="size" name="size" required>
-                            <option value="">Select Size</option>
-                            <option value="small">Small</option>
-                            <option value="medium">Medium</option>
-                            <option value="large">Large</option>
+                    <div class="flex flex-col gap-2">
+                        <label 
+                            for="pet-size"
+                            class="text-base font-medium text-primary">
+                            Size
+                        </label>
+
+                        <input
+                            id="pet-size" 
+                            name="size"
+                            type="text"
+                            required
+                            placeholder="Enter the pets size"
+                            class="h-12 w-full rounded-xl shadow-input border border-divider bg-surface px-4 text-base text-text outline-none transition-colors duration-200 focus:border-primary">
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label 
+                            for="pet-gender"
+                            class="text-base font-medium text-primary">
+                            Gender
+                        </label>
+
+                        <select 
+                            id="pet-gender"
+                            name="gender"    
+                            required
+                            class="h-12 w-full rounded-xl shadow-input border border-divider bg-surface px-4 text-base text-text outline-none transition-colors duration-200 focus:border-primary">
+
+                            <option value="">Select gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+
                         </select>
                     </div>
 
-                    <div>
-                        <label for="pet-description">Description</label>
-                        <textarea 
-                            id="pet-description"
-                            name="description"
-                            rows="6"
-                            required>
-                        </textarea>
+                    <div class="flex flex-col gap-2">
+                        <label 
+                            for="pet-species"
+                            class="text-base font-medium text-primary">
+                            Species
+                        </label>
+
+                        <input 
+                            id="pet-species"
+                            name="species"
+                            type="text"
+                            required
+                            placeholder="e.g Dog"
+                            class="h-12 w-full rounded-xl shadow-input border border-divider bg-surface px-4 text-base text-text outline-none transition-colors duration-200 focus:border-primary">
                     </div>
 
-                    <div>
-                        <label for="pet-image">Image URL</label>
+                    <div class="flex flex-col gap-2">
+                        <label 
+                            for="pet-color"
+                            class="text-base font-medium text-primary">
+                            Color
+                        </label>
+
+                        <input 
+                            id="pet-color"
+                            name="color"
+                            type="text"
+                            required
+                            placeholder="e.g Golden"
+                            class="h-12 w-full rounded-xl shadow-input border border-divider bg-surface px-4 text-base text-text outline-none transition-colors duration-200 focus:border-primary">
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label 
+                            for="pet-location"
+                            class="text-base font-medium text-primary">
+                            Location
+                        </label>
+
+                        <input 
+                            id="pet-location"
+                            name="location" 
+                            type="text"
+                            required
+                            placeholder="e.g Oslo"
+                            class="h-12 w-full rounded-xl shadow-input border border-divider bg-surface px-4 text-base text-text outline-none transition-colors duration-200 focus:border-primary">
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label 
+                            for="pet-status"
+                            class="text-base font-medium text-primary">
+                            Adoption Status
+                        </label>
+
+                        <select 
+                            id="pet-status"
+                            name="adoptionStatus"
+                            required
+                            class="h-12 w-full rounded-xl shadow-input border border-divider bg-surface px-4 text-base text-text outline-none transition-colors duration-200 focus:border-primary">
+
+                            <option value="Available">Available</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Adopted">Adopted</option>
+                        </select>
+                    </div>
+
+                    <div class="flex flex-col gap-2 lg:col-span-2">
+
+                        <label 
+                            for="pet-image"
+                            class="text-base font-medium text-primary">
+                            Image URL
+                        </label>
+
                         <input
                             id="pet-image"
                             name="image"
                             type="url"
-                            placeholder="https://example.com/dog.jpg">
+                            required
+                            placeholder="https://example.com/dog.jpg"
+                            class="h-12 w-full rounded-xl shadow-input border border-divider bg-surface px-4 text-base text-text outline-none transition-colors duration-200 focus:border-primary">
                     </div>
 
-                    <div id="message-container"></div>
+                    <div class="flex flex-col gap-2 lg:col-span-2">
 
-                    <button type="submit">Create</button>
+                        <label 
+                            for="pet-description"
+                            class="text-base font-medium text-primary">
+                            Description
+                        </label>
+
+                        <textarea 
+                            id="pet-description"
+                            name="description"
+                            rows="6"
+                            required
+                            class="w-full resize-none rounded-lg shadow-input border border-divider bg-surface p-4 text-base text-text outline-none transition-colors duration-200 focus:border-primary">
+                        </textarea>
+                    </div>
+
+                    <div 
+                        id="message-container"
+                        class="lg:col-span-2"
+                        aria-live="polite">
+                    </div>
+
+                    <button 
+                        type="submit"
+                        class="w-full rounded-lg bg-primary px-6 py-3 font-semibold text-surface transition-all duration-200 hover:bg-primaryHover lg:col-span-2">
+                        Create
+                    </button>
 
                 </form>
 
@@ -290,7 +456,7 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-4 items-start text-left">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <img 
                             src="../../assets/images/logo/footer-logo.svg" 
@@ -307,13 +473,13 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-4 items-start text-left">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <h3 class="text-xl font-semibold text-primary">
                             Quick links
                         </h3>
 
-                        <nav aria-label="Footer navigation" class="flex flex-col items-start gap-4">
+                        <nav aria-label="Footer navigation" class="flex flex-col items-center gap-4 md:items-start">
 
                             <a 
                                 href="../../index.html"
@@ -341,7 +507,7 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-4 items-start text-left">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <h3 class="text-xl font-semibold text-primary">
                             Contact
@@ -359,7 +525,7 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-6 items-center">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <h3 class="text-xl font-semibold text-primary">
                             Follow us

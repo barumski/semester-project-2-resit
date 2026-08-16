@@ -7,6 +7,8 @@ import { initializeSharePet } from "./components/sharePet.js";
 import { initializeRegister } from "./pages/register.js";
 import { initializeLogin } from "./pages/login.js";
 import { initializeAuthNavigation } from "./components/authNavigation.js";
+import { initializeCreatePet } from "./pages/createPet.js";
+import { initializeEditPet } from "./pages/editPet.js";
 
 initializeMobileMenu();
 initializeSearch();
@@ -17,6 +19,8 @@ initializeSharePet();
 initializeRegister();
 initializeLogin();
 initializeAuthNavigation();
+initializeCreatePet();
+initializeEditPet();
 
 
 

@@ -8,7 +8,7 @@
     content="Get in touch with the PetPals team. We'd love to hear from you.">
 
     <!-- Title -->
-    <title>PetPals | Contact</title>
+    <title>PetPals - Contact</title>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/favicon/apple-touch-icon.png">
@@ -112,7 +112,7 @@
         <nav 
             id="mobile-navigation"
             aria-label="Mobile navigation"
-            class="fixed left-0 top-0 z-50 hidden h-screen w-3/4 bg-surface shadow-xl lg:hidden">
+            class="fixed left-0 top-0 z-50 hidden h-[650px] max-h-[90vh] w-3/4 bg-surface shadow-xl lg:hidden">
 
             <div class="flex h-full flex-col px-6 pt-2 pb-6">
 
@@ -162,7 +162,7 @@
 
                 <div 
                     data-auth-logged-out
-                    class="mt-auto flex flex-col gap-4">
+                    class="mt-auto hidden flex-col gap-4">
 
                     <a 
                         href="../account/login/index.html"
@@ -192,7 +192,8 @@
                     </a>
 
                     <button
-                         data-logout-button 
+                        data-logout-button
+                        type="button" 
                         class="flex h-12 w-full items-center justify-center rounded-xl bg-primary text-base font-medium 
                         text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
                         Log Out
@@ -209,7 +210,7 @@
         <section id="contact" class="container-custom pt-16 pb-24">
 
              <a 
-                href="../../index.html"
+                href="../index.html"
                 class="inline-flex items-center gap-2 text-base font-medium text-primary transition-colors duration-200 hover:text-primaryHover hover:underline">
                 ← Back to Home
             </a>
@@ -225,17 +226,18 @@
                             alt=""
                             class="h-8 w-8">
 
-                        <h1 class="text-4xl font-semibold text-primary">
+                        <h1 class="text-3xl font-semibold text-primary">
                             Contact Us
                         </h1>
 
                     </div>
 
-                    <p class="mt-6 text-xl font-medium text-primary">
+                    <p class="mt-6 text-lg font-medium text-primary">
                         Have a question or need assistance?
                     </p>
 
-                    <p class="text-xl font-medium text-primary" mt-6 text-xl font-medium text-primary">We're here to help. Feel free to reach out using the
+                    <p class="mt-6 text-base font-medium text-primary lg:text-lg">
+                        We're here to help. Feel free to reach out using the
                         contact information below,<br> and we'll be happy to assist you.
                     </p>
 
@@ -352,7 +354,7 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-4 items-start text-left">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <img 
                             src="../assets/images/logo/footer-logo.svg" 
@@ -369,13 +371,13 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-4 items-start text-left">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <h3 class="text-xl font-semibold text-primary">
                             Quick links
                         </h3>
 
-                        <nav aria-label="Footer navigation" class="flex flex-col items-start gap-4">
+                        <nav aria-label="Footer navigation" class="flex flex-col items-center gap-4 md:items-start">
 
                             <a 
                                 href="../index.html"
@@ -403,7 +405,7 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-4 items-start text-left">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <h3 class="text-xl font-semibold text-primary">
                             Contact
@@ -421,7 +423,7 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-6 items-center">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <h3 class="text-xl font-semibold text-primary">
                             Follow us

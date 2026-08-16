@@ -8,7 +8,7 @@
     content="Learn more about each pet, view important details, and take the next step toward giving them a forever home.">
 
     <!-- Title -->
-    <title>PetPals | Pet Details</title>
+    <title>PetPals - Pet Details</title>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/favicon/apple-touch-icon.png">
@@ -34,32 +34,32 @@
     <header id="header-container" class="sticky top-0 z-50 bg-surface shadow-sm">
 
         <div class="container-custom flex h-20 items-center justify-between">
-            <a href="index.html" class="shrink-0">
-                <img src="assets/images/logo/header-logo.svg" alt="PetPals" class="w-36">
+            <a href="/index.html" class="shrink-0">
+                <img src="../assets/images/logo/header-logo.svg" alt="PetPals" class="w-36">
             </a>
 
             <nav id="main-navigation" aria-label="Primary navigation" class="hidden lg:flex lg:items-center lg:gap-10">
-                <a href="index.html"
+                <a href="../index.html"
                 class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">Home</a>
-                <a href="about/index.html"
+                <a href="../about/index.html"
                 class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">About</a>
-                <a href="contact/index.html"
+                <a href="../contact/index.html"
                 class="text-xl font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:underline hover:decoration-2">Contact</a>
             </nav>
 
-            <div 
-                data-auth-logged-out 
-                class="hidden items-center gap-4 lg:flex">
+            <div
+                data-auth-logged-out  
+                class="hidden items-center gap-4">
 
                 <a 
-                    href="account/login/index.html"
+                    href="../account/login/index.html"
                     class="flex h-12 w-24 items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
                     text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
                     Log In
                 </a>
                     
                 <a 
-                    href="account/register/index.html"
+                    href="../account/register/index.html"
                     class="flex h-12 w-24 items-center justify-center rounded-xl bg-primary text-base font-medium 
                     text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
                     Register
@@ -72,7 +72,7 @@
                 class="hidden items-center gap-4">
                 
                 <a 
-                    href="pet/create/index.html"
+                    href="./create/index.html"
                     class="flex h-12 w-24 items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
                     text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
                     Create
@@ -97,7 +97,7 @@
                 class="ml-2 flex h-11 w-11 items-center justify-center lg:hidden">
 
                 <img 
-                    src="assets/icons/ui/menu.svg" 
+                    src="../assets/icons/ui/menu.svg" 
                     alt="" 
                     class="h-6 w-6">
             </button>
@@ -112,12 +112,12 @@
         <nav 
             id="mobile-navigation"
             aria-label="Mobile navigation"
-            class="fixed left-0 top-0 z-50 hidden h-screen w-3/4 bg-surface shadow-xl lg:hidden">
+            class="fixed left-0 top-0 z-50 hidden h-[650px] max-h-[90vh] w-3/4 bg-surface shadow-xl lg:hidden">
 
             <div class="flex h-full flex-col px-6 pt-2 pb-6">
 
                 <img 
-                    src="assets/images/logo/header-logo.svg" 
+                    src="../assets/images/logo/header-logo.svg" 
                     alt="PetPals"
                     class="mx-auto mt-2 w-36">
 
@@ -129,30 +129,30 @@
                 <div class="mt-8 flex flex-col gap-6 border-t border-divider pt-6">
 
                     <a 
-                        href="index.html"
+                        href="../index.html"
                         class="flex items-center gap-3 py-2 text-base font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:decoration-primaryHover">
                             <img 
-                                src="assets/icons/ui/home.svg" 
+                                src="../assets/icons/ui/home.svg" 
                                 alt=""
                                 class="h-4 w-4">
                         Home
                     </a>
 
                     <a 
-                        href="about/index.html"
+                        href="../about/index.html"
                         class="flex items-center gap-3 py-2 text-base font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:decoration-primaryHover">
                             <img 
-                                src="assets/icons/ui/about.svg" 
+                                src="../assets/icons/ui/about.svg" 
                                 alt=""
                                 class="h-4 w-4">
                         About
                     </a>
                     
                     <a 
-                        href="contact/index.html"
+                        href="../contact/index.html"
                         class="flex items-center gap-3 py-2 text-base font-medium text-primary transition-all duration-200 ease-in-out hover:text-primaryHover hover:decoration-primaryHover">
                             <img 
-                                src="assets/icons/ui/phone.svg" 
+                                src="../assets/icons/ui/phone.svg" 
                                 alt=""
                                 class="h-4 w-4">
                         Contact
@@ -160,19 +160,19 @@
 
                 </div>
 
-                <div 
-                    data-auth-logged-out
-                    class="mt-auto flex flex-col gap-4">
+                <div
+                    data-auth-logged-out 
+                    class="mt-auto hidden flex-col gap-4">
 
                     <a 
-                        href="account/login/index.html"
+                        href="../account/login/index.html"
                         class="flex h-12 w-full items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
                         text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
                         Log In
                     </a>
 
                     <a 
-                        href="account/register/index.html"
+                        href="../account/register/index.html"
                         class="flex h-12 w-full items-center justify-center rounded-xl bg-primary text-base font-medium 
                         text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
                         Register
@@ -185,14 +185,15 @@
                     class="mt-auto hidden flex-col gap-4">
                     
                     <a 
-                        href="pets/create/index.html"
+                        href="./create/index.html"
                         class="flex h-12 w-full items-center justify-center rounded-xl border border-primary bg-surface text-base font-medium 
                         text-primary transition-all duration-200 ease-in-out hover:border-primaryHover hover:text-primaryHover">
                         Create
                     </a>
 
                     <button
-                        data-logout-button 
+                        data-logout-button
+                        type="button" 
                         class="flex h-12 w-full items-center justify-center rounded-xl bg-primary text-base font-medium 
                         text-surface transition-all duration-200 ease-in-out hover:bg-primaryHover">
                         Log Out
@@ -214,11 +215,11 @@
                 ← Back to Home
             </a>
 
-            <div class="mt-12 grid gap-12 lg:grid-cols-2">
+            <div class="mx-auto mt-12 grid max-w-5xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-0">
 
                 <div
                     id="pet-image-wrapper"
-                    class="relative h-[520px] w-full overflow-hidden rounded-2xl bg-disabled shadow-card">
+                    class="relative mx-auto h-[360px] w-full max-w-md overflow-hidden rounded-2xl bg-disabled shadow-card lg:h-[520px] lg:max-w-none">
 
                         <img
                             id="pet-image" 
@@ -233,11 +234,11 @@
                         </div>
                 </div>                    
 
-                <div>
+                <div class="md:px-16 lg:px-0">
 
                     <h1 
                         id="pet-name"
-                        class="font-heading text-4xl font-semibold text-primary"></h1>
+                        class="font-heading text-3xl font-semibold text-primary lg:text-4xl"></h1>
 
                     <section class="mt-10">
 
@@ -250,7 +251,7 @@
 
                             <h2 
                                 id="about-heading"
-                                class="font-heading text-2xl font-semibold text-primary">About</h2>
+                                class="font-heading text-xl font-semibold text-primary lg:text-2xl">About</h2>
 
                         </div>
 
@@ -269,7 +270,7 @@
                                 alt=""
                                 class="h-5 w-5">
 
-                            <h2 class="font-heading text-2xl font-semibold text-primary">
+                            <h2 class="font-heading text-xl font-semibold text-primary lg:text-2xl">
                                 Pet Details
                             </h2>
 
@@ -308,6 +309,11 @@
                             </div>
 
                             <div>
+                                <p class="font-semibold text-primary">Location:</p>
+                                <p id="pet-location" class="mt-1 font-medium text-text"></p>
+                            </div>
+
+                            <div>
                                 <p class="font-semibold text-primary">Status:</p>
                                 <p id="pet-status" class="mt-1 font-medium text-text"></p>
                             </div>
@@ -316,7 +322,9 @@
 
                     </section>
 
-                    <div id="public-actions" class="mt-10 flex items-center gap-6">
+                    <div 
+                        id="public-actions" 
+                        class="mt-10 flex items-center gap-6">
 
                         <button
                             id="adopt-button"
@@ -333,7 +341,7 @@
                                 type="button"
                                 aria-label="Share pet"
                                 title="Share"
-                                class="flex h-10 w-10 items-center jusify-center rounded-lg transition-all duration hover:-translate-y-1">
+                                class="flex h-10 w-10 items-center justify-center rounded-lg transition-all duration-200 hover:-translate-y-1">
 
                                     <img 
                                         src="../assets/icons/ui/share.svg" 
@@ -349,6 +357,8 @@
                             </span>
 
                         </div>
+                    
+                    </div>
 
                     <div 
                         id="admin-actions" class="mt-10 hidden items-center gap-6">
@@ -376,7 +386,7 @@
                                 type="button"
                                 aria-label="Share pet"
                                 title="Share"
-                                class="flex h-10 w-10 items-center jusify-center rounded-lg transition-all duration hover:-translate-y-1">
+                                class="flex h-10 w-10 items-center justify-center rounded-lg transition-all duration-200 hover:-translate-y-1">
 
                                     <img 
                                         src="../assets/icons/ui/share.svg" 
@@ -392,6 +402,12 @@
                             </span>
 
                         </div>                        
+                    </div>
+
+                    <div
+                        id="message-container"
+                        class="mt-4"
+                        aria-live="polite">                        
                     </div>
 
                 </div>
@@ -410,7 +426,7 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-4 items-start text-left">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <img 
                             src="../assets/images/logo/footer-logo.svg" 
@@ -427,13 +443,13 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-4 items-start text-left">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <h3 class="text-xl font-semibold text-primary">
                             Quick links
                         </h3>
 
-                        <nav aria-label="Footer navigation" class="flex flex-col items-start gap-4">
+                        <nav aria-label="Footer navigation" class="flex flex-col items-center gap-4 md:items-start">
 
                             <a 
                                 href="../index.html"
@@ -461,7 +477,7 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-4 items-start text-left">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <h3 class="text-xl font-semibold text-primary">
                             Contact
@@ -479,7 +495,7 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-6 items-center">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <h3 class="text-xl font-semibold text-primary">
                             Follow us

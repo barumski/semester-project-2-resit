@@ -113,7 +113,7 @@
         <nav 
             id="mobile-navigation"
             aria-label="Mobile navigation"
-            class="fixed left-0 top-0 z-50 hidden h-screen w-3/4 bg-surface shadow-xl lg:hidden">
+            class="fixed left-0 top-0 z-50 hidden h-[650px] max-h-[90vh] w-3/4 bg-surface shadow-xl lg:hidden">
 
             <div class="flex h-full flex-col px-6 pt-2 pb-6">
 
@@ -212,13 +212,16 @@
 
             <div class="grid lg:h-[600px] lg:grid-cols-2">
 
-                <div class="flex flex-col justify-center gap-6 px-10 lg:px-28">
+                <div class="flex flex-col justify-center gap-6 px-10 py-16 lg:px-28 lg:py-0">
 
-                    <h1 class="text-4xl font-bold leading-tight text-primary lg:text-6xl lg:leading-[72px]">Find your new <br>best friend</h1>
+                    <h1 class="text-4xl font-bold leading-tight text-primary lg:text-6xl lg:leading-[72px]">
+                        Find your new <br>best friend
+                    </h1>
 
                     <p class="max-w-xl text-base leading-relaxed text-text lg:text-xl">
                         Discover loving dogs, cats and other pets <br>waiting for a forever home. 
-                        Browse available <br>pets and find the perfect companion</p>
+                        Browse available <br>pets and find the perfect companion
+                    </p>
 
                     <div class="flex items-center gap-3">
 
@@ -230,7 +233,6 @@
                         <p 
                             id="pet-counter"
                             class="text-3xl font-semibold text-primary">
-                            250+
                         </p>
 
                     </div>
@@ -303,20 +305,23 @@
                         alt=""
                         class="h-8 w-8">
 
-                    <h2 class="text-5xl font-semibold text-primary">
+                    <h2 class="text-3xl font-semibold text-primary sm:text-4xl lg:text-5xl">
                         Meet our pets
                     </h2>
 
                     </div>
 
-                    <p class="mt-12 max-w-2xl text-center text-xl font-medium leading-relaxed text-primary">
+                    <p class="mt-12 max-w-2xl text-center text-base font-medium leading-relaxed text-primary sm:text-lg lg:text-xl">
                         Meet wonderful pets looking for a loving home.
                         <br>Browse our available pets and find your perfect <br>companion today.
                     </p>
 
                 </div>
 
-                <div id="pet-grid" class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3"></div>
+                <div 
+                    id="pet-grid" 
+                    class="mt-12 grid justify-items-center gap-10 sm:mx-auto sm:max-w-3xl sm:grid-cols-2 lg:max-w-none lg:grid-cols-3">
+                </div>
 
             </div>
 
@@ -338,7 +343,7 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-4 items-start text-left">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <img 
                             src="assets/images/logo/footer-logo.svg" 
@@ -355,13 +360,13 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-4 items-start text-left">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <h3 class="text-xl font-semibold text-primary">
                             Quick links
                         </h3>
 
-                        <nav aria-label="Footer navigation" class="flex flex-col items-start gap-4">
+                        <nav aria-label="Footer navigation" class="flex flex-col items-center gap-4 md:items-start">
 
                             <a 
                                 href="index.html"
@@ -389,7 +394,7 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-4 items-start text-left">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <h3 class="text-xl font-semibold text-primary">
                             Contact
@@ -407,7 +412,7 @@
 
                 <div class="flex justify-center">
 
-                    <div class="flex flex-col gap-6 items-center">
+                    <div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
 
                         <h3 class="text-xl font-semibold text-primary">
                             Follow us

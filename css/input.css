@@ -39,12 +39,24 @@
 
     .hero-gradient {
         background: linear-gradient(
-            90deg,
+            270deg,
             theme("colors.hero") 0%,
-            theme("colors.hero") 45%,
+            theme("colors.hero") 15%,
             #EEE8E4 50%,
             #EEE8E4 100%
         );
+    }
+
+    @media (min-width: 1024px) {
+        .hero-gradient {
+            background: linear-gradient(
+                90deg,
+                theme("colors.hero") 0%,
+                theme("colors.hero") 45%,
+                #EEE8E4 50%,
+                #EEE8E4 100%
+            );
+        }
     }
 
     .input-shadow {

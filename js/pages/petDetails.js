@@ -1,5 +1,9 @@
 import { getPetById } from "../api/pets/getPetById.js";
 import { capitalize } from "../utils/formatText.js";
+import { getUser } from "../utils/storage.js";
+import { deletePet } from "../api/pets/deletePet.js";
+import { editPet } from "../api/pets/editPet.js";
+import { displayMessage } from "../components/displayMessage.js";
 
 export async function initializePetDetails() {
     const petName = document.querySelector("#pet-name");
@@ -12,8 +16,15 @@ export async function initializePetDetails() {
     const petGender = document.querySelector("#pet-gender");
     const petSpecies = document.querySelector("#pet-species");
     const petColor = document.querySelector("#pet-color");
+    const petLocation = document.querySelector("#pet-location");
     const petStatus = document.querySelector("#pet-status");
     const petImagePlaceholder = document.querySelector("#pet-image-placeholder");
+    const publicActions = document.querySelector("#public-actions");
+    const adminActions = document.querySelector("#admin-actions");
+    const adoptButton = document.querySelector("#adopt-button");
+    const editButton = document.querySelector("#edit-button");
+    const deleteButton = document.querySelector("#delete-button");
+    const messageContainer = document.querySelector("#message-container");
 
     const params = new URLSearchParams(window.location.search);
     const petId = params.get("id");
@@ -26,6 +37,37 @@ export async function initializePetDetails() {
         const response = await getPetById(petId);
         const pet = response.data;
 
+        editButton?.addEventListener("click", () => {
+            window.location.href = `edit/index.html?id=${pet.id}`;
+        });
+
+        const user = getUser();
+
+        const isOwner = 
+            user &&
+            pet.owner?.name &&
+            user.name === pet.owner.name;
+
+        if (isOwner) {
+            publicActions?.classList.add("hidden");
+
+            adminActions.classList.remove("hidden");
+            adminActions.classList.add("flex");
+
+        } else {
+            publicActions?.classList.remove("hidden");
+            publicActions?.classList.add("flex");
+
+            adminActions?.classList.add("hidden");
+            adminActions?.classList.remove("flex");
+
+            if (user) {
+                adoptButton?.classList.remove("hidden");
+            } else {
+                adoptButton?.classList.add("hidden");
+            }
+        }
+
         if (pet.image?.url) {
             petImage.src = pet.image.url;
             petImage.alt = pet.image.alt || `${pet.name} the ${pet.breed}`;
@@ -35,6 +77,7 @@ export async function initializePetDetails() {
                 petImagePlaceholder.classList.remove("hidden");
                 petImagePlaceholder.classList.add("flex");
             });
+
         } else {
             petImage.classList.add("hidden");
             petImagePlaceholder.classList.remove("hidden");
@@ -63,7 +106,38 @@ export async function initializePetDetails() {
 
         petSpecies.textContent = capitalize(pet.species);
         petColor.textContent = capitalize(pet.color);
+        petLocation.textContent = pet.location || "Not specified";
         petStatus.textContent = capitalize(pet.adoptionStatus);
+
+        adoptButton?.addEventListener("click", () => {
+            displayMessage(
+                "success",
+                `Thanks for your interest in ${pet.name}.<br>
+                Please contact us to continue the adoption process.<br><br>
+                Email: support@petpals.com<br>
+                Phone: +47 123 45 678.`,
+                messageContainer
+            );
+        });
+
+        deleteButton?.addEventListener("click", async () => {
+            const confirmed = window.confirm(
+                `Are you sure you want to delete ${pet.name}?`
+            );
+
+            if (!confirmed) {
+                return;
+            }
+
+            try {
+                await deletePet(pet.id);
+
+                window.location.href = "../index.html";
+
+            } catch (error) {
+                console.error(error);
+            }
+        });
 
     } catch (error) {
         console.error(error);

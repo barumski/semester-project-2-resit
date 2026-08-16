@@ -27,11 +27,11 @@ export function initializeAuthNavigation() {
         });
 
         loggedInGroups.forEach((group) => {
-            group.classList.remove("hidden");
-
             if (group.closest("#mobile-navigation")) {
+                group.classList.remove("hidden");
                 group.classList.add("flex");
             } else {
+                group.classList.add("hidden");
                 group.classList.add("lg:flex");
             }
         });
@@ -46,11 +46,11 @@ export function initializeAuthNavigation() {
         });
 
         loggedOutGroups.forEach((group) => {
-            group.classList.remove("hidden");
-
             if (group.closest("#mobile-navigation")) {
+                group.classList.remove("hidden");
                 group.classList.add("flex");
             } else {
+                group.classList.add("hidden");
                 group.classList.add("lg:flex");
             }
         });
