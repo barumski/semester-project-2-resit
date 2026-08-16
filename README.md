@@ -54,13 +54,13 @@ The design process included:
 
 The project was planned and managed using a Kanban board.
 
-### Kanban Board
+### Trello Board
 
-[View Project Board]()
+[View Project Board](https://trello.com/b/I1Q4BiOH/semester-project-2-resit)
 
 ### Gantt Chart
 
-[View Gantt Chart]()
+[View Gantt Chart](docs/gantt-chart.md)
 
 ## Getting Started
 
@@ -95,6 +95,32 @@ Manual testing included:
 - Authentication-based feedback
 - Sharing pet listings
 - Responsive layouts on desktop, tablet, and mobile devices
+
+### HTML Validation
+
+The application was tested using the HTML Markup Validation Tool. Validation issues found during testing were reviewed and corrected.
+
+### Accessibility
+
+The application was tested using the WAVE Web Accessibility Evaluation Tool.
+
+After addressing the identified color contrast issues, the tested pages reported:
+
+- 0 accessibility errors
+- 0 contrast errors
+
+### Lighthouse 
+
+Lighthouse was used to test the deployed application.
+
+The Home page received the following mobile scores:
+
+- Performance: 88
+- Accessibility: 100
+- Best Practices: 77
+- SEO: 100
+
+The Best Practices score was affected by third-party resources used by pet images, including third-party cookies and browser issues reported for external image hosts. 
 
 ## AI Usage
 
