@@ -42,7 +42,7 @@ module.exports = {
         ageBg: "#E8F3EC",
         male: "#2D5BD1",
         maleBg: "#E6F0FF",
-        size: "#8A6D00",
+        size: "##8A6D00",
         sizeBg: "#FFF3D6",
         female: "#7A3485",
         femaleBg: "#F2D6FF"

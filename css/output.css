@@ -1434,8 +1434,7 @@ button,
 }
 
 .text-size {
-  --tw-text-opacity: 1;
-  color: rgb(138 109 0 / var(--tw-text-opacity, 1));
+  color: ##8A6D00;
 }
 
 .text-success {
