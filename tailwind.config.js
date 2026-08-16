@@ -32,7 +32,7 @@ module.exports = {
         text: "#2D2D2D",
         success: "#4CAF50",
         successBg: "#EAF7EC",
-        warning: "#856900",
+        warning: "#665000",
         warningBg: "#FFF7E6",
         danger: "#D9534F",
         dangerBg: "#FCECEC",
@@ -42,7 +42,7 @@ module.exports = {
         ageBg: "#E8F3EC",
         male: "#2D5BD1",
         maleBg: "#E6F0FF",
-        size: "##8A6D00",
+        size: "#665000",
         sizeBg: "#FFF3D6",
         female: "#7A3485",
         femaleBg: "#F2D6FF"

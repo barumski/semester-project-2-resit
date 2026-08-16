@@ -1158,7 +1158,7 @@ button,
 
 .border-warning {
   --tw-border-opacity: 1;
-  border-color: rgb(133 105 0 / var(--tw-border-opacity, 1));
+  border-color: rgb(102 80 0 / var(--tw-border-opacity, 1));
 }
 
 .bg-ageBg {
@@ -1434,7 +1434,8 @@ button,
 }
 
 .text-size {
-  color: ##8A6D00;
+  --tw-text-opacity: 1;
+  color: rgb(102 80 0 / var(--tw-text-opacity, 1));
 }
 
 .text-success {
@@ -1454,7 +1455,7 @@ button,
 
 .text-warning {
   --tw-text-opacity: 1;
-  color: rgb(133 105 0 / var(--tw-text-opacity, 1));
+  color: rgb(102 80 0 / var(--tw-text-opacity, 1));
 }
 
 .underline {
